@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogCard from '../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout title="voltracker">
+  <section class="mb-16">
+    <h1 class="text-4xl font-bold tracking-tight text-gray-900">
+      Hey, I'm voltracker
+    </h1>
+    <p class="mt-4 text-lg text-gray-600">
+      Welcome to my corner of the internet. I write about things I'm building and learning.
+    </p>
+  </section>
+
+  {posts.length > 0 && (
+    <section>
+      <h2 class="text-xl font-semibold text-gray-900">Recent posts</h2>
+      <div class="mt-6 space-y-8">
+        {posts.map((post) => (
+          <BlogCard
+            title={post.data.title}
+            date={post.data.date}
+            description={post.data.description}
+            tags={post.data.tags}
+            slug={post.slug}
+          />
+        ))}
+      </div>
+      <a href="/blog" class="mt-6 inline-block text-sm text-blue-600 hover:underline">
+        View all posts
+      </a>
+    </section>
+  )}
+</BaseLayout>
