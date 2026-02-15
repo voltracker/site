@@ -6,8 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://voltracker.github.io',
-  base: '/site',
+  site: 'https://voltracker.uk',
   output: 'static',
   vite: {
     plugins: [tailwindcss()]
