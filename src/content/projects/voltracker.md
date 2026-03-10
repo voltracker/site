@@ -6,4 +6,4 @@ url: "https://voltracker.uk"
 date: 2026-02-14
 ---
 
-This site! A static portfolio and blog built with Astro and styled with Tailwind CSS. Content is authored in Markdown and the site is deployed automatically to GitHub Pages via GitHub Actions.
+This very website. Built using Astro, Tailwind and deployed via GitHub Pages. Primarily developed using Claude Code as my entrypoint to agentic workflow.

@@ -10,17 +10,17 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
 <BaseLayout title="voltracker">
   <section class="mb-16">
-    <h1 class="text-4xl font-bold tracking-tight text-gray-900">
+    <h1 class="text-4xl font-bold tracking-tight dark:text-gray-100 text-gray-900">
       Hey, I'm voltracker
     </h1>
-    <p class="mt-4 text-lg text-gray-600">
+    <p class="mt-4 text-lg dark:text-gray-400 text-gray-600">
       Welcome to my corner of the internet. I write about things I'm building and learning.
     </p>
   </section>
 
   {posts.length > 0 && (
     <section>
-      <h2 class="text-xl font-semibold text-gray-900">Recent posts</h2>
+      <h2 class="text-xl font-semibold dark:text-gray-100 text-gray-900">Recent posts</h2>
       <div class="mt-6 space-y-8">
         {posts.map((post) => (
           <BlogCard
@@ -32,7 +32,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
           />
         ))}
       </div>
-      <a href="/blog" class="mt-6 inline-block text-sm text-blue-600 hover:underline">
+      <a href="/blog" class="mt-6 inline-block text-sm dark:text-blue-400 text-blue-600 hover:underline">
         View all posts
       </a>
     </section>

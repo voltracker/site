@@ -17,3 +17,11 @@ I'll be writing about:
 - Interesting problems I've solved
 
 Stay tuned for more.
+<br>
+<br>
+
+```java
+public static void main(String args..) {
+  System.out.println(args[1] + " world");
+}
+```

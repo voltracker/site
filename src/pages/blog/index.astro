@@ -8,7 +8,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <BaseLayout title="Blog — voltracker" description="Blog posts about things I'm building and learning.">
-  <h1 class="text-3xl font-bold tracking-tight text-gray-900">Blog</h1>
+  <h1 class="text-3xl font-bold tracking-tight dark:text-gray-100 text-gray-900">Blog</h1>
   {posts.length > 0 ? (
     <div class="mt-8 space-y-8">
       {posts.map((post) => (
