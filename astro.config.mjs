@@ -1,15 +1,26 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
-import sitemap from '@astrojs/sitemap';
+import tailwindcss from "@tailwindcss/vite";
+import sitemap from "@astrojs/sitemap";
+
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://voltracker.uk',
-  output: 'static',
+  site: "https://voltracker.uk",
+  output: "static",
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
-  integrations: [sitemap()]
+  integrations: [sitemap(), icon()],
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.fontsource(),
+        name: "Iosevka",
+        cssVariable: "--font-iosevka",
+      },
+    ],
+  },
 });

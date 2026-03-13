@@ -3,6 +3,7 @@ title: "voltracker.uk"
 description: "Personal portfolio and blog built with Astro, Tailwind CSS, and deployed to GitHub Pages."
 tags: ["astro", "tailwind", "github-pages"]
 url: "https://voltracker.uk"
+repo: "https://github.com/voltracker/site"
 date: 2026-02-14
 ---
 
