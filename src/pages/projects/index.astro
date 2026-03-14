@@ -18,6 +18,7 @@ const projects = (await getCollection('projects'))
           tags={project.data.tags}
           url={project.data.url}
           repo={project.data.repo}
+          slug={project.slug}
         />
       ))}
     </div>
